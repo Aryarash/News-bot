@@ -47,8 +47,8 @@ export class News extends Component {
     return (
       <div>
         <Router>
-          <div className='container my-3 '>
-            <h2 className='text-center my-5'>{`NewsBot - Latest ${this.props.category==='general'?'':this.capitalise(this.props.category)} Headlines`}</h2>
+          <div className='container'>
+            <h2 className='text-center' style={{margin:'90px'}}>{`NewsBot - Latest ${this.props.category==='general'?'':this.capitalise(this.props.category)} Headlines`}</h2>
             {this.state.loading && <Loading/>}
             <div className="row">
               {!this.state.loading && this.state.article.map((element) => {
